@@ -1,6 +1,6 @@
 # CPE Site
 
-This is the website source for Community Programming & Events, the fictional company made for GID315, Web Design III.
+This is the website source for Community Programming & Events, the fictional company made for GID315.
 
 ## Compiling
 

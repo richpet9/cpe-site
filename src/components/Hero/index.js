@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Hero.css';
+
 const Hero = props => {
-  return <h1>Banner!</h1>;
+    return <div id="hero-container">Banner!</div>;
 };
 
 Hero.propTypes = {};

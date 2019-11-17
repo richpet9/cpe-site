@@ -1,4 +1,18 @@
 @import '../../defaults.scss';
 
 #hero-container {
+    color: white;
+    position: relative;
+    padding: 30px;
+    width: 100%;
+
+    //Photo by Slim Emcee (UG) the poet Truth_From_Africa_Photography on Unsplash
+    background-image: url('/img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    #hero-copy {
+        position: relative;
+        top: 100px;
+    }
 }

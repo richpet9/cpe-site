@@ -9,14 +9,23 @@ const Header = ({ navItems }) => {
 
     return (
         <header>
-            <nav>
+            <nav className="container">
+                <div id="brand-container">
+                    <a href="/">
+                        <img id="brand-logo" src="/img/brand.png" alt="Community Programming & Events" title="Home" />
+                        <div id="brand-name">
+                            <h1 id="community">Community</h1>
+                            <h2 id="p-e"> Programming & Events</h2>
+                        </div>
+                    </a>
+                </div>
                 <ul>
                     {navItems.map(item => {
                         //Render each nav item in a list-item and link
                         return (
                             <li key={item.copy} style={{ width: preferredWidth }}>
                                 <a href={item.url} title={item.copy}>
-                                    {item.copy}
+                                    <span>{item.copy}</span>
                                 </a>
                             </li>
                         );

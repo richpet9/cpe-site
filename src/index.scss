@@ -1,3 +1,4 @@
+@import './defaults.scss';
 /* This is the master styling class, imported first, and sets up some defaults */
 
 * {
@@ -5,6 +6,7 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: $serifFont;
 }
 
 a,
@@ -13,4 +15,17 @@ a:hover,
 a:focus,
 a:active {
     color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $sansSerifFont;
+}
+
+.container {
+    margin: 0 48px;
 }

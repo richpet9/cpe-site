@@ -1,7 +1,39 @@
 import React from 'react';
 
 const Home = () => {
-  return <p>Hello!</p>;
+    return (
+        <p>
+            Hello!
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </p>
+    );
 };
 
 export default Home;

@@ -13,13 +13,15 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    #hero-copy {
+    .hero-copy {
         position: relative;
-        top: 128px;
+        top: 112px;
 
         .hero-children {
             border-radius: 8px;
-            padding: 28px;
+            margin: 32px;
+            padding: 16px;
+            width: 50%;
 
             * {
                 margin: 8px 0;
@@ -39,25 +41,23 @@
             }
         }
 
-        #hero-right {
+        .hero-right {
             background: rgba($color: #000000, $alpha: 0.55);
-            margin-left: 40%;
         }
     }
 }
 
-.button-container {
-    padding: 8px;
+//1020 MEDIA QUERY
+@media screen and (max-width: 1020px) {
+    .hero-copy {
+        top: 50px !important;
 
-    .button {
-        font-family: $sansSerifFont;
-        padding: 8px 10px;
-        border-radius: 5px;
-        display: inline-block;
-    }
+        .hero-children {
+            width: 100% !important;
+        }
 
-    .button.knockout {
-        color: white;
-        background: $blue;
+        .hero-children.spacer {
+            display: none !important;
+        }
     }
 }

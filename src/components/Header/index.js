@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Header.css';
@@ -6,9 +6,19 @@ import './Header.css';
 const Header = ({ navItems }) => {
     //Get the preferred width from # of items
     const preferredWidth = Math.floor(100 / navItems.length) + '%';
+    const [miniature, setMiniature] = useState(false);
+    const headerContainer = useRef();
+
+    window.onscroll = () => {
+        if (window.scrollY > headerContainer.current.scrollHeight) {
+            setMiniature(true);
+        } else {
+            setMiniature(false);
+        }
+    };
 
     return (
-        <header>
+        <header ref={headerContainer} className={miniature ? 'mini' : ''}>
             <nav className="container flex-between">
                 <div id="brand-container">
                     <a href="/">

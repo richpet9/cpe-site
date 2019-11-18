@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <p className="container">
+        <div className="container">
             <h1>Hello!</h1>
             <br />
             <br />
@@ -32,7 +32,7 @@ const Home = () => {
             <br />
             <br />
             <br />
-        </p>
+        </div>
     );
 };
 

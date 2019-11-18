@@ -9,10 +9,10 @@ const Header = ({ navItems }) => {
 
     return (
         <header>
-            <nav className="container">
+            <nav className="container flex-between">
                 <div id="brand-container">
                     <a href="/">
-                        <img id="brand-logo" src="/img/brand.png" alt="Community Programming & Events" title="Home" />
+                        <img id="brand-logo" src="/img/brand-white.png" alt="Community Programming & Events" title="Home" />
                         <div id="brand-name">
                             <h1 id="community">Community</h1>
                             <h2 id="p-e"> Programming & Events</h2>

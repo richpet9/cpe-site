@@ -29,3 +29,38 @@ h6 {
 .container {
     margin: 0 48px;
 }
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* * * Paragraph Styles * * */
+i,
+em,
+.light-text {
+    font-weight: 300 !important;
+}
+
+b,
+strong,     //fr
+.heavy-text {
+    font-weight: 600;
+}
+
+.magenta-text {
+    color: $magenta;
+}
+
+.green-text {
+    color: $green;
+}
+
+.blue-text {
+    color: $blue;
+}

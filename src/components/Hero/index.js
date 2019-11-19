@@ -1,20 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../Button';
 
 import './Hero.css';
 
-const Hero = props => {
-    //80% of the window's height
-    const [height, setHeight] = useState(window.innerHeight * 0.8);
+const Hero = ({ height, backgroundURLs }) => {
+    const backgrounds = backgroundURLs.map((url, index) => {
+        return {
+            index: index,
+            src: "url('" + url + "')"
+        };
+    });
 
-    window.onresize = () => {
-        if (height != window.innerHeight * 0.8) {
-            setHeight(window.innerHeight * 0.8);
-        }
+    const [currentBackground, setCurrentBackground] = useState(backgrounds[0]);
+    const [nextBackground, setNextBackground] = useState(backgrounds[1]);
+    const bgCurrentContainer = useRef();
+    const bgNextContainer = useRef();
+
+    const changeBackground = index => {
+        setNextBackground(backgrounds[index]);
+        bgCurrentContainer.current.className = 'hero-bg transition';
+        setTimeout(() => {
+            setCurrentBackground(backgrounds[index]);
+            bgCurrentContainer.current.className = 'hero-bg';
+        }, 700);
     };
+
+    useEffect(() => {
+        const backgroundInterval = setInterval(() => {
+            changeBackground((currentBackground.index + 1) % backgrounds.length);
+        }, 5000);
+
+        return () => clearInterval(backgroundInterval);
+    });
 
     return (
         <div id="hero-container" style={{ height: height }}>
+            <div className="hero-bg-next" ref={bgNextContainer} style={{ height: height, backgroundImage: nextBackground.src }}></div>
+            <div className="hero-bg" ref={bgCurrentContainer} style={{ height: height, backgroundImage: currentBackground.src }}></div>
             <div className="hero-copy container flex-around">
                 <div className="hero-left hero-children spacer"></div>
                 <div className="hero-right hero-children">
@@ -34,6 +57,11 @@ const Hero = props => {
             </div>
         </div>
     );
+};
+
+Hero.propTypes = {
+    height: PropTypes.number.isRequired,
+    backgroundURLs: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Hero;

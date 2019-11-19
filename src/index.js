@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import Home from './pages/Home';
 
 import './index.css';
@@ -17,7 +16,6 @@ function App() {
     return (
         <div className="App">
             <Header navItems={navItems} />
-            <Hero />
             <Home />
         </div>
     );

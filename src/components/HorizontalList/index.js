@@ -13,7 +13,7 @@ const HorizontalList = ({ children, label }) => {
             )}
             {children.map(child => {
                 return (
-                    <li className="h-list-item" key={child}>
+                    <li className="h-list-item" key={child.key}>
                         {child}
                     </li>
                 );

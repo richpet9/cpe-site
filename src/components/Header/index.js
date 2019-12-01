@@ -20,12 +20,12 @@ const Header = ({ navItems }) => {
     return (
         <header ref={headerContainer} className={miniature ? 'mini' : ''}>
             <nav className="container flex-between">
-                <div id="brand-container">
+                <div className="brand-container">
                     <a href="/">
-                        <img id="brand-logo" src="/img/brand-white.png" alt="Community Programming & Events" title="Home" />
-                        <div id="brand-name">
-                            <h1 id="community">Community</h1>
-                            <h2 id="p-e"> Programming & Events</h2>
+                        <img className="brand-logo" src="/img/brand-white.png" alt="Community Programming & Events" title="Home" />
+                        <div className="brand-name">
+                            <h1 className="community">Community</h1>
+                            <h2 className="p-e"> Programming & Events</h2>
                         </div>
                     </a>
                 </div>

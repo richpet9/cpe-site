@@ -7,15 +7,38 @@ const Header = ({ navItems }) => {
     //Get the preferred width from # of items
     const preferredWidth = Math.floor(100 / navItems.length) + '%';
     const [miniature, setMiniature] = useState(false);
+    const [collapse, setCollapse] = useState(false);
     const headerContainer = useRef();
+    const hamburgerMenu = useRef();
 
-    window.onscroll = () => {
+    const checkCollapse = () => {
+        if (window.innerWidth < 740) {
+            setCollapse(true);
+        } else {
+            setCollapse(false);
+        }
+    };
+
+    const checkMini = () => {
         if (window.scrollY > headerContainer.current.scrollHeight) {
             setMiniature(true);
         } else {
             setMiniature(false);
         }
     };
+
+    const showMenu = () => {
+        hamburgerMenu.current.style.display = hamburgerMenu.current.style.display === 'block' ? 'none' : 'block';
+    };
+
+    window.onload = () => {
+        checkCollapse();
+        checkMini();
+    };
+
+    window.onscroll = checkMini;
+
+    window.onresize = checkCollapse;
 
     return (
         <header ref={headerContainer} className={miniature ? 'mini' : ''}>
@@ -25,22 +48,47 @@ const Header = ({ navItems }) => {
                         <img className="brand-logo" src="/img/brand-white.png" alt="Community Programming & Events" title="Home" />
                         <div className="brand-name">
                             <h1 className="community">Community</h1>
-                            <h2 className="p-e"> Programming & Events</h2>
+                            {collapse && miniature ? '' : <h2 className="p-e"> Programming & Events</h2>}
                         </div>
                     </a>
                 </div>
-                <ul>
-                    {navItems.map(item => {
-                        //Render each nav item in a list-item and link
-                        return (
-                            <li key={item.copy} style={{ width: preferredWidth }}>
-                                <a href={item.url} title={item.copy}>
-                                    <span>{item.copy}</span>
-                                </a>
-                            </li>
-                        );
-                    })}
-                </ul>
+                {!collapse && (
+                    <ul>
+                        {navItems.map(item => {
+                            //Render each nav item in a list-item and link
+                            return (
+                                <li key={item.copy} style={{ width: preferredWidth }}>
+                                    <a href={item.url} title={item.copy}>
+                                        <span>{item.copy}</span>
+                                    </a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
+                {collapse && (
+                    <div className="nav-hamburger-container">
+                        <span onClick={showMenu}>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </span>
+                        <nav className="nav-hamburger" ref={hamburgerMenu}>
+                            <ul>
+                                {navItems.map(item => {
+                                    //Render each nav item in a list-item and link
+                                    return (
+                                        <li key={item.copy} style={{ width: preferredWidth }}>
+                                            <a href={item.url} title={item.copy}>
+                                                <span>{item.copy}</span>
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </nav>
+                    </div>
+                )}
             </nav>
         </header>
     );

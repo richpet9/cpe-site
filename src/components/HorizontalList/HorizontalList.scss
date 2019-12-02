@@ -48,3 +48,29 @@
         color: #000;
     }
 }
+
+//1020 MEDIA QUERY
+@media screen and (max-width: 1220px) {
+    .h-list {
+        flex-wrap: wrap;
+
+        .h-list-label {
+            width: 100%;
+        }
+    }
+}
+
+//740 MEDIA QUERY
+@media screen and (max-width: 740px) {
+    .h-list {
+        flex-wrap: wrap;
+
+        .h-list-label {
+            width: 100%;
+        }
+
+        .h-list-item {
+            width: 100%;
+        }
+    }
+}

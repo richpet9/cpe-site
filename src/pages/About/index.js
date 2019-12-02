@@ -51,7 +51,7 @@ const About = props => {
                                 Community Programming and Events relies heavily on outside help to support our initiatives. Lorem ipsum dolor set Morbi sed arcu
                                 convallis, tempor orci nec, sagittis diam. Duis sem est, tristique a metus id, sagittis convallis lacus.
                             </p>
-                            <Button linkTo="/donate" icon="fas fa-arrow-right" bgColor="#00d1b8" title="Donate Today!" />
+                            <Button linkTo="/donate" icon="fas fa-arrow-right" bgColor="#ef5bdd" title="Donate Today!" />
                             <span style={{ marginLeft: 16 }}>
                                 ...or{' '}
                                 <a href="/contact" style={{ textDecoration: 'underline' }}>

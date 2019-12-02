@@ -28,21 +28,23 @@
             }
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 0;
-            left: calc(100% + 32px);
-            width: 1px;
-            height: 100%;
-            background: $lightGrey;
-        }
+        //Uncomment for horizontal dividers
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     top: 0;
+        //     left: calc(100% + 32px);
+        //     width: 1px;
+        //     height: 100%;
+        //     background: $lightGrey;
+        // }
     }
 
     .h-list-label {
         line-height: 1.1;
         width: 10%;
         min-width: 120px;
+        color: #000;
     }
 }

@@ -5,7 +5,7 @@ import Card from '../../components/Card';
 import Button from '../../components/Button';
 
 const Home = () => {
-    //80% of the window's height
+    //90% of the window's height
     const heroHeight = window.innerHeight * 0.9;
     const backgroundURLs = ['/img/hero/hero-bg-0.jpg', '/img/hero/hero-bg-1.jpg', '/img/hero/hero-bg-2.jpg', '/img/hero/hero-bg-3.jpg', '/img/hero/hero-bg-4.jpg'];
 
@@ -85,7 +85,7 @@ const Home = () => {
     return (
         <div>
             <Hero height={heroHeight} backgroundURLs={backgroundURLs} leftChild={null} rightChild={rightHeroChild} />
-            <a id="events" style={{ position: 'relative', top: -32 }} />
+            <span id="events" style={{ position: 'relative', top: -32 }} />
             <section className="container" style={{ marginTop: 32, marginBottom: 100 }}>
                 <HorizontalList label="Upcoming Events">
                     {events.map(newsItem => {

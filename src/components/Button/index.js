@@ -6,7 +6,7 @@ import './Button.css';
 const Button = ({ linkTo, icon, bgColor, title }) => (
     <div className="button-container">
         <a href={linkTo} className="button" title={title} style={{ background: bgColor || 'transparent' }}>
-            DONATE TODAY {icon && <span className={icon}></span>}
+            {title} {icon && <span className={icon}></span>}
         </a>
     </div>
 );

@@ -1,0 +1,26 @@
+@import '../../defaults.scss';
+
+#hero-container {
+    .hero-bg,
+    .hero-bg-next {
+        background-color: #111113;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .hero-bg {
+        opacity: 1;
+        transition: opacity 1000ms $ease-in-out;
+    }
+
+    .hero-bg.transition {
+        opacity: 0;
+    }
+}

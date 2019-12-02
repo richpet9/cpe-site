@@ -1,3 +1,4 @@
+@import './defaults.scss';
 /* This is the master styling class, imported first, and sets up some defaults */
 
 * {
@@ -5,6 +6,15 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: $serifFont;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    scroll-behavior: smooth;
 }
 
 a,
@@ -13,4 +23,78 @@ a:hover,
 a:focus,
 a:active {
     color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $sansSerifFont;
+}
+
+.body-header {
+    margin: 16px 0;
+}
+
+.container {
+    margin: 0 48px;
+}
+
+.page.container {
+    position: relative;
+    top: 88px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* * * Paragraph Styles * * */
+i,
+em,
+.light-text {
+    font-weight: 300 !important;
+}
+
+b,
+strong,     //fr
+.heavy-text {
+    font-weight: 600;
+}
+
+.magenta-text {
+    color: $magenta;
+}
+
+.green-text {
+    color: $green;
+}
+
+.blue-text {
+    color: $blue;
+}
+
+.big-text {
+    font-size: 56px;
+    font-family: $sansSerifFont;
+}
+.push-left {
+    width: 55%;
+    margin-right: 45%;
+}
+.push-right {
+    width: 55%;
+    margin-left: 45%;
 }

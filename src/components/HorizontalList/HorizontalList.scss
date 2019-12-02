@@ -1,0 +1,50 @@
+@import '../../defaults.scss';
+
+.h-list {
+    display: flex;
+    margin: 64px 0;
+
+    .h-list-item {
+        position: relative;
+        margin: 0 32px;
+        margin-bottom: 64px;
+        list-style: none;
+        width: 30%;
+        flex-grow: 1;
+
+        &:first-child {
+            margin-left: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        //Uncomment for horizontal dividers
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     top: 0;
+        //     left: calc(100% + 32px);
+        //     width: 1px;
+        //     height: 100%;
+        //     background: $lightGrey;
+        // }
+    }
+
+    .h-list-label {
+        line-height: 1.1;
+        width: 10%;
+        min-width: 120px;
+        color: #000;
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../defaults.scss';
+
+.text-section {
+    margin: 64px auto;
+    text-align: left;
+    width: 100%;
+
+    h1 {
+        font-weight: lighter;
+        text-align: right;
+        width: 30%;
+        padding-right: 32px;
+        color: $magenta;
+    }
+
+    .text-container {
+        width: 70%;
+        max-width: 500px;
+
+        p {
+            margin: 16px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

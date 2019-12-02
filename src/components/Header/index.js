@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Header.css';
@@ -6,17 +6,36 @@ import './Header.css';
 const Header = ({ navItems }) => {
     //Get the preferred width from # of items
     const preferredWidth = Math.floor(100 / navItems.length) + '%';
+    const [miniature, setMiniature] = useState(false);
+    const headerContainer = useRef();
+
+    window.onscroll = () => {
+        if (window.scrollY > headerContainer.current.scrollHeight) {
+            setMiniature(true);
+        } else {
+            setMiniature(false);
+        }
+    };
 
     return (
-        <header>
-            <nav>
+        <header ref={headerContainer} className={miniature ? 'mini' : ''}>
+            <nav className="container flex-between">
+                <div className="brand-container">
+                    <a href="/">
+                        <img className="brand-logo" src="/img/brand-white.png" alt="Community Programming & Events" title="Home" />
+                        <div className="brand-name">
+                            <h1 className="community">Community</h1>
+                            <h2 className="p-e"> Programming & Events</h2>
+                        </div>
+                    </a>
+                </div>
                 <ul>
                     {navItems.map(item => {
                         //Render each nav item in a list-item and link
                         return (
                             <li key={item.copy} style={{ width: preferredWidth }}>
                                 <a href={item.url} title={item.copy}>
-                                    {item.copy}
+                                    <span>{item.copy}</span>
                                 </a>
                             </li>
                         );

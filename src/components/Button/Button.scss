@@ -1,0 +1,41 @@
+@import '../../defaults.scss';
+
+.button-container {
+    padding: 8px 0;
+    color: white;
+    display: inline-block;
+
+    .button {
+        font-family: $sansSerifFont;
+        padding: 8px 10px;
+        border-radius: 5px;
+        display: inline-block;
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        &:hover {
+            span {
+                animation-name: slide-icon;
+                animation-duration: 300ms;
+                animation-iteration-count: 2;
+            }
+        }
+    }
+
+    @keyframes slide-icon {
+        from {
+            padding-left: 0;
+        }
+
+        50% {
+            padding-left: 4px;
+        }
+
+        to {
+            padding-left: 0;
+        }
+    }
+}

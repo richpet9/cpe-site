@@ -1,0 +1,72 @@
+@import '../../defaults.scss';
+
+.join-container {
+    text-align: center;
+    font-size: 1rem;
+
+    h1 {
+        margin-top: 64px;
+    }
+}
+
+.form {
+    width: 25%;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    text-align: left;
+
+    .input-container {
+        display: block;
+        width: 100%;
+        margin: 16px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0px;
+            top: 13px;
+            left: -18px;
+            border: 3px solid $green;
+            border-width: 0px 3px 3px 0px;
+            padding: 3px;
+            transform: rotate(-45deg);
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 22px;
+            font-family: $sansSerifFont;
+            font-weight: lighter;
+        }
+
+        .input-text {
+            display: block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            background: rgb(235, 235, 235);
+            padding: 6px 8px;
+            border-radius: 5px;
+
+            &:focus {
+                border-color: $green;
+            }
+        }
+    }
+
+    .submit-container {
+        width: 100%;
+        text-align: right;
+
+        .button {
+            cursor: pointer;
+        }
+    }
+}

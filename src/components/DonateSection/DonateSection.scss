@@ -1,0 +1,33 @@
+@import '../../defaults.scss';
+
+.donate-section {
+    text-align: center;
+
+    &[inverted='true'] .input-container::before {
+        border-color: white !important;
+    }
+
+    .donate-amount-container {
+        .donate-dollar {
+            position: absolute;
+            margin-right: 0px;
+            font-size: 18px;
+            bottom: 14px;
+            left: 8px;
+            font-weight: bold;
+            transform: rotate(12deg);
+            z-index: 2;
+            color: rgb(73, 73, 73);
+        }
+
+        .donate-cents {
+            position: relative;
+            margin-left: 8px;
+            top: 8px;
+        }
+
+        input {
+            padding-left: 24px !important;
+        }
+    }
+}

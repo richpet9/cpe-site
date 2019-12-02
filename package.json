@@ -18,6 +18,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "watch-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
+        "build-css": "node-sass-chokidar src/ -o src/ --recursive",
         "start-server": "nodemon server.js"
     },
     "eslintConfig": {

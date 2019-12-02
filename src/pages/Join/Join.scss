@@ -70,3 +70,17 @@
         }
     }
 }
+
+//1020 MEDIA QUERY
+@media screen and (max-width: 1220px) {
+    .form {
+        width: 50%;
+    }
+}
+
+//740 MEDIA QUERY
+@media screen and (max-width: 740px) {
+    .form {
+        width: 80%;
+    }
+}

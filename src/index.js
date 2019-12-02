@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Join from './pages/Join';
 import Services from './pages/Services';
+import Donate from './pages/Donate';
 
 import './index.css';
 
@@ -26,10 +27,12 @@ function App() {
                     <Route path="/about" component={About} />
                     <Route path="/join" component={Join} />
                     <Route path="/services" component={Services} />
+                    <Route path="/donate" component={Donate} />
+                    <Route path="/contact" component={Services} />
                     <Route exact path="/" component={Home} />
                 </Switch>
             </BrowserRouter>
-            <Footer />
+            <Footer navItems={navItems} />
         </div>
     );
 }

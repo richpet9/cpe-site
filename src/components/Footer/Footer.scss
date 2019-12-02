@@ -4,10 +4,40 @@ footer {
     background: $black;
     color: white;
     padding: 64px 0;
+    padding-bottom: 8px;
     font-size: 18px;
 
+    .brand-container {
+        width: 10%;
+        flex-shrink: 1;
+        min-width: 400px;
+    }
+
+    .nav-container {
+        display: flex;
+        width: 20%;
+        flex-shrink: 1;
+        margin-right: 10%;
+
+        ul {
+            list-style: none;
+            width: 50%;
+            li {
+                a {
+                    text-decoration: underline;
+                    font-size: 14px;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
     .socials-container {
-        width: 60%;
+        width: 20%;
+        flex-grow: 1;
 
         .h-list {
             margin: 0;
@@ -16,5 +46,12 @@ footer {
         .h-list-item::after {
             display: none;
         }
+    }
+
+    .centered {
+        text-align: center;
+        font-size: 12px;
+        font-family: $sansSerifFont;
+        margin: 32px 0;
     }
 }

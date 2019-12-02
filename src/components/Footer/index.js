@@ -3,7 +3,7 @@ import HorizontalList from '../HorizontalList';
 
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({ navItems }) => {
     let socialLinks = [];
 
     socialLinks.push(
@@ -54,10 +54,36 @@ const Footer = () => {
                         </div>
                     </a>
                 </div>
+                <div className="nav-container">
+                    <ul>
+                        {navItems.map(item => {
+                            return (
+                                <li key={item.copy}>
+                                    <a href={item.url} title={item.copy}>
+                                        <span>{item.copy}</span>
+                                    </a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="/contact" title="Contact Us">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/donate" title="Donate">
+                                Donate
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div className="socials-container">
                     <HorizontalList children={socialLinks}></HorizontalList>
                 </div>
             </div>
+            <div className="centered">&copy; 2019 Community Programming & Events</div>
         </footer>
     );
 };

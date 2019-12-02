@@ -4,7 +4,7 @@ import Hero from '../../components/Hero';
 import './Join.css';
 import Button from '../../components/Button';
 
-const InputText = ({ label, name, placeholder }) => (
+export const InputText = ({ label, name, placeholder }) => (
     <div className="input-container">
         <label className="label" for={name}>
             {label}
@@ -15,7 +15,7 @@ const InputText = ({ label, name, placeholder }) => (
 
 const Join = () => {
     return (
-        <div>
+        <section className="join-container">
             <Hero
                 height={400}
                 backgroundURLs={'../img/join-header.jpg'}
@@ -26,6 +26,8 @@ const Join = () => {
                 }
                 rightChild={null}
             />
+
+            <h1>Sign up to join your Community</h1>
 
             <form className="form" action="#">
                 <InputText label="Full Name" name="fullname" placeholder="Full Name" />
@@ -44,7 +46,7 @@ const Join = () => {
                     <Button value="Submit" icon="fas fa-arrow-right" bgColor="#00d1b8" title="Sign Up" />
                 </div>
             </form>
-        </div>
+        </section>
     );
 };
 

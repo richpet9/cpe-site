@@ -1,7 +1,9 @@
 @import '../../defaults.scss';
 
 .button-container {
-    padding: 8px;
+    padding: 8px 0;
+    color: white;
+    display: inline-block;
 
     .button {
         font-family: $sansSerifFont;

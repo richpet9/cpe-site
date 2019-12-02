@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Join from './pages/Join';
+import Services from './pages/Services';
 
 import './index.css';
 
@@ -12,8 +14,8 @@ function App() {
     const navItems = [
         { url: '/#events', copy: 'Events' },
         { url: '/about', copy: 'About' },
-        { url: '#', copy: 'Services' },
-        { url: '#', copy: 'Join' }
+        { url: '/services', copy: 'Services' },
+        { url: '/join', copy: 'Join' }
     ];
 
     return (
@@ -22,6 +24,8 @@ function App() {
             <BrowserRouter>
                 <Switch>
                     <Route path="/about" component={About} />
+                    <Route path="/join" component={Join} />
+                    <Route path="/services" component={Services} />
                     <Route exact path="/" component={Home} />
                 </Switch>
             </BrowserRouter>

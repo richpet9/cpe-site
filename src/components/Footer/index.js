@@ -9,28 +9,28 @@ const Footer = () => {
     socialLinks.push(
         <p>
             <a href="https://facebook.com" title="Facebook">
-                <i class="fab fa-facebook-square"></i>
+                <i className="fab fa-facebook-square"></i>
             </a>
         </p>
     );
     socialLinks.push(
         <p>
             <a href="https://instagram.com" title="Instagram">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
             </a>
         </p>
     );
     socialLinks.push(
         <p>
             <a href="https://twitter.com" title="Twitter">
-                <i class="fab fa-twitter-square"></i>
+                <i className="fab fa-twitter-square"></i>
             </a>
         </p>
     );
     socialLinks.push(
         <p>
             <a href="https://linkedin.com" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"></i>
             </a>
         </p>
     );

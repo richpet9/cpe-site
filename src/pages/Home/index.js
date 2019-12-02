@@ -78,7 +78,7 @@ const Home = () => {
                 nec, sagittis diam. Duis sem est, tristique a metus id, sagittis convallis lacus.
             </p>
 
-            <Button linkTo="#" icon="fas fa-arrow-right" bgColor="#00d1b8" title="Donate Today!" />
+            <Button linkTo="/donate" icon="fas fa-arrow-right" bgColor="#00d1b8" title="Donate Today!" />
         </div>
     );
 
